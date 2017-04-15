@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Car Management System - Admin Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../js/clickout.js"></script>
+    <!-- HTML includes are done by JavaScript -->
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <!-- Add my css -->
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/animated-menu-icon.css">
+    <!-- Add icon for title page -->
+    <link rel="shortcut icon" type="image/png" href="../../icon/ic_title1.png">
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+
+<div id="top-nav" class="shadow">
+    <div class="pull-left">
+        <a href="#" class="site-title">
+            <!--<div class="menu-container" onclick="myFunction(this)">-->
+            <!--<div class="bar1"></div>-->
+            <!--<div class="bar2"></div>-->
+            <!--<div class="bar3"></div>-->
+            <!--</div>-->
+            <!--<span class="glyphicon glyphicon-home"></span>-->
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+            <span>Car Management System</span>
+        </a>
+    </div>
+    <div class="admin pull-right flex">
+        <div class="admin-name">
+            <img class="img-circle" src="../../icon/profile.jpg"
+                 alt="null">
+            <span>John Doe <i class="glyphicon glyphicon-chevron-down" style="font-size: 10px;"></i></span>
+        </div>
+        <ul class="admin-content shadow">
+            <li>
+                <a href="#">
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>Settings</span>
+                    <span class="badge bg-red pull-right">50%</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>Help</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>Logout</span>
+                    <span class="glyphicon glyphicon-log-out pull-right"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="pull-right" id="env-content">
+        <i class="glyphicon glyphicon-envelope envelope">
+            <span class="badge">9</span>
+        </i>
+    </div>
+</div>
+
+<div id="left-nav">
+    <div class="profile">
+        <div class="profile-pic">
+            <img class="img-circle profile-image" src="../../icon/profile.jpg"
+                 alt="null">
+        </div>
+        <div class="profile-info">
+            <span>Welcome,</span>
+            <h2>John Doe</h2>
+        </div>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    </div>
+    <div style="clear: both;"></div>
+    <div id="left-nav-content">
+        <ul>
+            <li class="list-active">
+                <div class="left-nav-content-main">
+                    <i class="glyphicon glyphicon-cog fa"></i>
+                    Quản lý tài khoản
+                    <span class="glyphicon glyphicon-chevron-down gl-right"></span>
+                </div>
+                <ul class="child-menu" style="display: block">
+                    <li class="current-page"><a href="index.html">Danh sách tài khoản</a></li>
+                    <li><a href="javascript:void(0)">Thêm tài khoản</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="left-nav-content-main">
+                    <i class="glyphicon glyphicon-cog fa"></i>
+                    Quản lý lộ trình
+                    <span class="glyphicon glyphicon-chevron-down gl-right"></span>
+                </div>
+                <ul class="child-menu">
+                    <li class=""><a href="#">Danh sách lộ trình</a></li>
+                    <li><a href="#">Dashboard 1</a></li>
+                    <li><a href="#">Dashboard 1</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="left-nav-content-main">
+                    <i class="glyphicon glyphicon-cog fa"></i>
+                    Quản lý lịch chạy
+                    <span class="glyphicon glyphicon-chevron-down gl-right"></span>
+                </div>
+                <ul class="child-menu">
+                    <li><a href="#">Lịch chạy</a></li>
+                    <li><a href="#">Lịch chạy tuần</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="left-nav-content-main">
+                    <i class="glyphicon glyphicon-cog fa"></i>
+                    Quản lý tài xế
+                    <span class="glyphicon glyphicon-chevron-down gl-right"></span>
+                </div>
+                <ul class="child-menu">
+                    <li class=""><a href="#">Danh sách tài xế</a></li>
+                    <li><a href="#">Dashboard 1</a></li>
+                    <li><a href="#">Dashboard 1</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="left-nav-content-main">
+                    <i class="glyphicon glyphicon-cog fa"></i>
+                    Quản lý xe
+                    <span class="glyphicon glyphicon-chevron-down gl-right"></span>
+                </div>
+                <ul class="child-menu">
+                    <li class=""><a href="#">Danh sách xe</a></li>
+                    <li><a href="#">Dashboard 1</a></li>
+                    <li><a href="#">Dashboard 1</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="left-nav-content-main">
+                    <i class="glyphicon glyphicon-cog fa"></i>
+                    Thống kê
+                    <span class="glyphicon glyphicon-chevron-down gl-right"></span>
+                </div>
+                <ul class="child-menu">
+                    <li class=""><a href="#">Thống kê doanh thu</a></li>
+                    <li><a href="#">Dashboard 1</a></li>
+                    <li><a href="#">Dashboard 1</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="bottom-left-nav">
+        <a href="#">
+            <span class="glyphicon glyphicon-cog"></span>
+        </a>
+        <a href="#">
+            <span class="glyphicon glyphicon-fullscreen"></span>
+        </a>
+        <a href="#">
+            <span class="glyphicon glyphicon-eye-close"></span>
+        </a>
+        <a href="#">
+            <span class="glyphicon glyphicon-off"></span>
+        </a>
+    </div>
+</div>
+
+<div id="main-content">
+    <div class="center-content">
+        <div class="user-detail">
+            <div class="user-detail-top shadow">
+                <ul>
+                    <li class="tab-active">Thông tin tài khoản</li>
+                    <li>Lịch sử hoạt động</li>
+                </ul>
+                <div class="account-info">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 col-sm-offset-2" for="email">Email:</label>
+                            <div class="col-sm-6">
+                                <input type="email" class="form-control" id="email" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 col-sm-offset-2" for="pwd">Password:</label>
+                            <div class="col-sm-6">
+                                <input type="password" class="form-control" id="pwd" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 col-sm-offset-2" for="cf-pwd">Confirm Password:</label>
+                            <div class="col-sm-6">
+                                <input type="password" class="form-control" id="cf-pwd" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 col-sm-offset-2" for="first-name">Firstname:</label>
+                            <div class="col-sm-6">
+                                <input type="email" class="form-control" id="first-name" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 col-sm-offset-2" for="last-name">Lastname:</label>
+                            <div class="col-sm-6">
+                                <input type="email" class="form-control" id="last-name" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 col-sm-offset-2" for="address">Address:</label>
+                            <div class="col-sm-6">
+                                <input type="email" class="form-control" id="address" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 col-sm-offset-2">Profile picture:</label>
+                            <div class="col-sm-6">
+                                <img src="../../icon/profile.png" alt="profile image">
+                                <button class="btn btn-default">Upload new picture</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-4 col-sm-8">
+                                <button type="submit" class="btn btn-default">Update Profile</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="video-upload">
+
+                </div>
+                <div class="music-upload">
+
+                </div>
+                <div class="search-history">
+
+                </div>
+                <div class="comment-history">
+
+                </div>
+                <div class="like-history">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div style=" background-color: #1abb9c; height: 500px; margin: 20px;">-->
+
+    <!--</div>-->
+
+</div>
+
+<footer class="footer">
+    <p style="padding-right: 20px;">Developed by Khanh Nguyen</p>
+</footer>
+
+<script>
+    function openNav() {
+        document.getElementById("left-nav").style.width = "17.7%";
+        document.getElementById("main-content").style.marginLeft = "17.7%";
+//        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+    function closeNav() {
+        document.getElementById("left-nav").style.width = "0";
+        document.getElementById("main-content").style.marginLeft= "0";
+//        document.body.style.backgroundColor = "white";
+    }
+
+</script>
+<script src="../../js/admin.js"></script>
+
+</body>
+</html>
