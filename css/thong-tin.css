@@ -55,83 +55,17 @@
     color: #fff !important;
 }
 
+/*============Thông tin========*/
 
-/*=========Ticket==========*/
-.ticket{
-    margin: 0;
-    padding: 0;
-}
-
-.left-ticket{
+.left-info{
     border: solid 1px #ddd;
     border-radius: 5px;
-    max-height: 600px;
 }
 
-
-
-.form-control{
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: solid 1px red;
-}
-
-/*giá tiền*/
-.loai-gia{
-    border-color: #ddd;
-}
-
-.center-ticket{
+.right-info{
     border: solid 1px #ddd;
-    margin-left: 15px;
+    margin-left: 10px;
 }
-
-.lo-trinh .menu li{
-    list-style: none;
-    display: inline-block;
-    border-top: solid 1px red;
-    padding-left: 50px;
-    padding-top: 29px;
-    border-spacing: 3px;
-    margin-left: -5px;
-    margin-top: 30px;
-}
-
-.lo-trinh .menu .menu-con p{
-    padding-top: -25px;
-    border-bottom: solid 1px #35CD2F;
-    text-align: center;
-    font-weight: bold;
-}
-
-.lo-trinh .menu li:before{
-    background-image: url('../icon/map-marker.png');
-    content: "";
-    height: 32px;
-    width: 32px;
-    position: absolute;
-    top: 78px;
-    margin-top: -17px;
-    border-radius: 50%;
-}
-
-.lo-trinh .menu #diem-cuoi{
-    border-left: none;
-}
-
-
-.right-ticket{
-    border: solid 1px #ddd;
-    margin-left: 15px;
-    margin-top: 20px;
-}
-
-.right-ticket p{
-    padding-top: 3px;
-    font-weight: bold;
-}
-
 
 /*============Contact==========*/
 

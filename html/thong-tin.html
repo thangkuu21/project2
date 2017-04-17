@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../css/dat_ve.css">
+    <link rel="stylesheet" href="../css/thong-tin.css">
     <link rel="stylesheet" href="../css/main.css">
     <!-- Latest compiled and minified CSS -->
 
@@ -23,21 +23,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/locales/bootstrap-datepicker.vi.min.js"></script>
-    <script src="../js/main-page.js"></script>
-
-
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $(".loai-ghe").change(function() {
-                $('.loai-gia').hide();
-                $('#' + $(this).val()).show();
-            });
-        });
-        
-    </script>
-
-    </script>
 </head>
 <body>
 <div id="loader" style="display: none;">
@@ -117,115 +102,57 @@
         </div>
     </header>
 
-
-
-    <section class="ticket">
+<!--Thông tin khách hàng-->
+    <section class="thong-tin">
         <div class="container">
             <div class="row">
-                <!--Chọn thông tin chuyến đi-->
-                <div class="col-md-3 left-ticket">
-                    <p class="text-center text-primary text-uppercase">Bạn chọn thông tin chuyến</p>
+                <div class="col-md-4 left-info">
+                    <p class="text-center text-primary text-uppercase">Thông tin khách hàng</p>
                     <hr>
                     <div class="col-lg-12">
-                        <!--Chon tuyen-->
                         <div class="form-group">
-                            <label>Chọn chuyến</label>
+                            <label>Họ tên <sup style="color: red">*</sup></label>
+                            <div class="control"><input class="form-control pull-right" type="text" placeholder="Nhập tên khách hàng"></div>
+                            <hr>    
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Số điện thoại <sub style="color: red">*</sub></label>
+                            <input class="form-control pull-right" type="text" placeholder="Nhập số điện thoại">
+                        </div>
+                        <div class="form-group">
+                            <label>Ngày sinh</label>
                             <div class="control">
-                               <i class="fa fa-bus text-primary"></i>
-                               <p class="form-control pull-right"><span>Hà Nội => TP.Hồ Chí Minh</span></p>
-                           </div>
-                           <hr>
+                                <input id="select-date" name="selectDate" placeholder=" dd/mm/yyyy" class="form-control date-readonly" placeholder="dd/mm/yyyy" type="text" data-provide="datepicker"  data-date-format="dd/mm/yyyy">
+                            </div>
                         </div>
-
-                     <!--Chon gio-->
-                     <div class="form-group">
-                        <label>Chọn giờ</label>
-                        <div class="control">
-                            <i class="fa fa-clock-o text-primary"></i>
-                            <select class="form-control pull-right">                                
-                                <option>04:45 (Ghế)</option>
-                                <option>06:45 (Ghế)</option>
-                                <option>08:45 (Ghế)</option>
-                                <option>10:15 (Ghế)</option>
-                                <option>11:15 (Ghế)</option>
-                            </select>
+                        <div class="form-group">
+                            <div class="control">
+                                <a href="dat_ve.html"><button class="btn btn-warning">Quay lại</button></a>
+                                <a href="#" title=""><button class="btn btn-success">Tiếp tục</button></a>
+                            </div>
                         </div>
-                        <hr>
-                    </div>
-                    <div class="form-group">
-                        <label>Điểm đón</label>
-                        <div class="control">
-                           <i class="fa fa-bus text-primary"></i>
-                           <input type="text" name="" placeholder="Mời bạn nhập điểm đón" class="form-control pull-right">
-                        </div> 
-                        <hr>
-                    </div>
-                    <div class="form-group">
-                        <label>Trạm</label>
-                        <div class="control">
-                            <i class="fa fa-car text-primary"></i>
-                            <select class="form-control pull-right">
-                                <option>Trạm 1</option>
-                                <option>Trạm 2</option>
-                                <option>Trạm 3</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Loại ghế</label>
-                        <div class="control">
-                            <i class="fa fa-ticket text-primary"></i>
-                            <select class="form-control pull-right loai-ghe">
-                                <option value="loai1">Ghế loại I</option>
-                                <option value="loai2">Ghế loại II</option>
-                                <option value="loai3">Ghế loại III</option>
-                            </select>
-                            <div id="loai1" class="loai-gia form-control pull-right" style="">Giá tiền:180.000(VNĐ)</div>
-                            <div id="loai2" class="loai-gia form-control pull-right" style="display: none">Giá tiền:150.000(VNĐ)</div>
-                            <div id="loai3" class="loai-gia form-control pull-right" style="display: none">Giá tiền:130.000(VNĐ)</div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="form-group">
-                        <a href="index.html"><button class="btn btn-warning ">Quay Lại</button></a>
-                        <a href="thong-tin.html"><button class="btn btn-success">Tiếp tục</button></a>
-                    </div>
                     </div>
                 </div>
-                <!--Lộ trình tuyến đi-->
-                <div class="col-md-8 center-ticket">
-                    <p class="text-center text-uppercase text-primary">Lộ trình chuyến đi</p>
-                    <hr>
-                    <div class="lo-trinh">
-                        <ul class="menu">
-                            <li class="menu-con"><p>Hà Nội</p></li>
-                            <li class="menu-con"><p>điểm a  Ninh Bình</p></li>
-                            <li class="menu-con"><p> điểm b Nghệ An</p></li>
-                            <li class="menu-con">
-                                <p>Đà Nẵng</p>
-                            </li>
-                            <!-- <li class="menu-con">
-                                <p>Khánh Hòa</p>
-                            </li> -->
-                            <li class="menu-con" id="diem-cuoi">
-                                <p>TP.Hồ Chí Minh</p>
-                            </li>
-                            
-                        </ul>
-                    </div>
 
+                <div class="col-md-7 right-info">
+                    <p class="text-center text-uppercase text-primary">Thông tin khách hàng cần biết</p>
+                    <hr>
+                    <div class="control">
+                        <p class="text-justify">(*) Quý khách vui lòng mang email có chứa mã vé đến văn phòng để đổi vé lên xe trước giờ xuất bến ít nhất <strong class="text-primary">60 phút</strong>  để chúng tôi trung chuyển.</p>
+                        <p class="text-justify">(*) Thông tin hành khách phải chính xác, nếu không sẽ không thể lên xe hoặc hủy/đổi vé</p>
+                        <p class="text-justify">(*) Quý khách không được đổi / trả vé vào các ngày Lễ Tết ( ngày thường qúy khách được quyền chuyển đổi hoặc hủy vé <strong class="text-primary">một lần</strong> duy nhất trước giờ xe chạy 24 giờ), phí hủy vé 10%. </p>
+                        <p class="text-justify">(*) Nếu quý khách có nhu cầu trung chuyển, vui lòng liên hệ số điện thoại<br> 
+                        <strong class="text-primary" style="font-size: 1.2em;">1900 6067</strong> 
+                        trước khi đặt vé. Chúng tôi sẽ không đón/ trung chuyển tại những điểm xe trung chuyển không thể tới được.
+                        </p>
+                    </div>
                 </div>
-                <!--Thông tin các chuyến-->
-                <div class="col-sm-8 right-ticket ">
-                  <p class="text-center text-primary text-uppercase"> Thông tin các khách hàng cần biết</p>
-                  <hr>
-              
-                  <div class="form-group"><p><i class="fa fa-circle text-primary"></i> Nhà xe hỗ trợ chở khách trong vòng phạm vi 10km từ các trạm</p></div>
-                  <div class="form-group"><p><i class="fa fa-circle text-primary"></i> Nhà xe hỗ trợ các dịch vụ: nước uống, khăn ướt, điều hòa,...</p></div>
-              </div> 
             </div>
         </div>
+        
     </section>
+    
 <!-- Contact-->
     <div class="container">
         <div class="row">
