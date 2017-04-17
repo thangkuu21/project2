@@ -10,26 +10,41 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/dat_ve.css">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/main-page.css">
     <!-- Latest compiled and minified CSS -->
+
+    <!-- Font icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
-    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/i18n/defaults-*.min.js"></script>
+    
     <!-- Bootstrap date picker plugin-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/locales/bootstrap-datepicker.vi.min.js"></script>
     <script src="../js/main-page.js"></script>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".loai-ghe").change(function() {
+                $('.loai-gia').hide();
+                $('#' + $(this).val()).show();
+            });
+        });
+        
+    </script>
+
+    </script>
 </head>
 <body>
 <div id="loader" style="display: none;">
 
 </div>
 <div class="wrapper">
+<!--Header-->
     <div class="container-fluid" id="top-header">
         <div class="container">
             <div class="pull-left">
@@ -101,128 +116,76 @@
             </nav>
         </div>
     </header>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-7">
-                <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                        <li data-target="#myCarousel" data-slide-to="3"></li>
-                    </ol>
 
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <img src="../icon/limousine-1.jpg" alt=''>
-                            <div class="carousel-caption">
-                                <h3>Chania</h3>
-                                <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
-                            </div>
+
+
+    <section class="ticket">
+        <div class="container">
+            <div class="row">
+                <!--Chọn thông tin chuyến đi-->
+                <div class="col-md-4 left-ticket">
+                    <p class="text-center text-primary text-uppercase">Bạn chọn thông tin chuyến</p>
+                    <hr>
+                    <div class="col-lg-12">
+                        <!--Chon tuyen-->
+                        <div class="form-group">
+                            <label>Chọn chuyến</label>
+                            <div class="control">
+                               <i class="fa fa-bus text-primary"></i>
+                               <p class="form-control pull-right"><span>Hà Nội => TP.Hồ Chí Minh</span></p>
+                           </div>
+                           <hr>
                         </div>
-                        <div class="item">
-                            <img src="../icon/limousine-2.jpg" alt=''>
-                            <div class="carousel-caption">
-                                <h3>Chania</h3>
-                                <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
-                            </div>
+
+                     <!--Chon gio-->
+                     <div class="form-group">
+                        <label>Chọn giờ</label>
+                        <div class="control">
+                            <i class="fa fa-clock-o text-primary"></i>
+                            <select class="form-control pull-right">                                
+                                <option>04:45 (Ghế)</option>
+                                <option>06:45 (Ghế)</option>
+                                <option>08:45 (Ghế)</option>
+                                <option>10:15 (Ghế)</option>
+                                <option>11:15 (Ghế)</option>
+                            </select>
                         </div>
-                        <div class="item">
-                            <img src="../icon/limousine-3.jpg" alt=''>
-                            <div class="carousel-caption">
-                                <h3>Chania</h3>
-                                <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="../icon/limousine-4.jpg" alt=''>
-                            <div class="carousel-caption">
-                                <h3>Chania</h3>
-                                <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
-                            </div>
+                        <hr>
+                    </div>
+                    <div class="form-group">
+                        <label>Điểm đón</label>
+                        <div class="control">
+                           <i class="fa fa-bus text-primary"></i>
+                           <input type="text" name="" placeholder="Mời bạn nhập điểm đón" class="form-control pull-right">
+                        </div> 
+                        <hr>
+                    </div>
+                    <div class="form-group">
+                        <label>Loại ghế</label>
+                        <div class="control">
+                            <i class="fa fa-ticket text-primary"></i>
+                            <select class="form-control pull-right loai-ghe">
+                                <option value="loai1">Ghế loại I</option>
+                                <option value="loai2">Ghế loại II</option>
+                                <option value="loai3">Ghế loại III</option>
+                            </select>
+                            <div id="loai1" class="loai-gia form-control pull-right" style="">Giá tiền:180.000(VNĐ)</div>
+                            <div id="loai2" class="loai-gia form-control pull-right" style="display: none">Giá tiền:150.000(VNĐ)</div>
+                            <div id="loai3" class="loai-gia form-control pull-right" style="display: none">Giá tiền:130.000(VNĐ)</div>
                         </div>
                     </div>
-
-                    <!-- Left and right controls -->
-                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                <hr>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-5">
-                <div class="booking shadow-all">
-                    <div class="booking-content">
-                        <h4 class="booking-title">
-                            Đặt chỗ trực tuyến
-                        </h4>
-                        <form class="form" name="bookingForm" method="POST" action="">
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    <div class="form-group">
-                                        <label for="select-origin">Điểm khởi hành</label>
-                                        <div class="controls">
-                                            <!--<i class="fa fa-bus text-primary"></i>-->
-                                            <select name="selectOrigin" id="select-origin" class="selectpicker"
-                                                    data-live-search="true" data-width="100%">
-                                                <option data-tokens="Hà Nội">Hà Nội</option>
-                                                <option data-tokens="TP. Hồ Chí Minh">TP. Hồ Chí Minh</option>
-                                                <option data-tokens="Đà Nẵng">Đà Nẵng</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-6">
-                                    <div class="form-group">
-                                        <label for="select-destination">Điểm khởi hành</label>
-                                        <div class="controls">
-                                            <!--<i class="fa fa-bus text-primary"></i>-->
-                                            <select name="selectDestination" id="select-destination" class="selectpicker"
-                                                    data-live-search="true" data-width="100%">
-                                                <option data-tokens="Hà Nội">Hà Nội</option>
-                                                <option data-tokens="TP. Hồ Chí Minh">TP. Hồ Chí Minh</option>
-                                                <option data-tokens="Đà Nẵng">Đà Nẵng</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    <div class="form-group">
-                                        <label for="select-date">Ngày khỏi hành</label>
-                                        <div class="controls">
-                                            <!--<i class="fa fa-clock-o text-primary"></i>-->
-                                            <input id="select-date" name="selectDate" placeholder=" dd/mm/yyyy" class="form-control date-readonly" value="16/04/2017" readonly="" type="text" data-provide="datepicker"  data-date-format="dd/mm/yyyy">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-6">
-                                    <div class="form-group">
-                                        <label for="num-ticket">Số lượng vé</label>
-                                        <div class="controls">
-                                            <!--<i class="fa fa-ticket text-primary"></i>-->
-                                            <input id="num-ticket" name="numOfTicket" placeholder="1" value="1" class="form-control" min="1" max="10" type="number" disabled>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <a href="dat_ve.html" class="btn btn-primary btn-lg active" role="button" title="">Đặt vé</a>
-                            </div>
-                        </form>
-                    </div>
+                <!--Thông tin các chuyến-->
+                <div class="col-sm-8 right-ticket">
+                    <p class="text-center text-primary text-uppercase"> Thông tin các tuyến</p>
+                    <hr>
                 </div>
             </div>
         </div>
-    </div>
-
+    </section>
+<!-- Contact-->
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
@@ -272,7 +235,7 @@
             </div>
         </div>
     </div>
-
+<!--Footer-->
     <footer class="footer">
         <div class="container bg-grey">
             <h2 class="text-center">CONTACT</h2>
@@ -308,4 +271,9 @@
         </div>
     </footer>
 </div>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/i18n/defaults-*.min.js"></script>
 </body>
